@@ -1,0 +1,20 @@
+.container{
+    background-color: cornflowerblue;
+    margin-left: auto;
+    width: 60%;
+    padding: 10px;
+}
+.grid-container{
+    display: grid;
+    grid-gap: .5em;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(16,1fr);
+    
+
+}
+.grid-container>div{
+    background-color: rgb(173, 197, 240);
+    text-align: center;
+    padding: 1em;
+
+}
