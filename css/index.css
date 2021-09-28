@@ -1,20 +1,46 @@
-.container{
-    background-color: cornflowerblue;
-    margin-left: auto;
-    width: 60%;
-    padding: 10px;
+:root{
+    --val: 16;
 }
+.main{
+    display: grid; 
+    background-color: yellow;
+    grid-template-columns: 10% 90%; 
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;height: 100%;
+
+}
+.mgrid{
+    margin: 0; 
+    padding: 2%;
+    
+}
+.cell-1{
+    background-color: rgb(37, 33, 33);
+}
+.cell-2{
+    background-color: red;
+    
+}
+
 .grid-container{
     display: grid;
-    grid-gap: .5em;
-    grid-template-columns: repeat(16,1fr);
-    grid-template-rows: repeat(16,1fr);
-    
+    grid-gap: 0; 
+    grid-template-columns: repeat(var(--val),1fr);
+    grid-template-rows: repeat(var(--val),1fr);  
+    width: 1000px;
+    height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
-.grid-container>div{
-    background-color: rgb(173, 197, 240);
-    text-align: center;
-    padding: 1em;
 
+
+.grid-item{
+    background-color: rgb(173, 197, 240);
+    padding:1px;
+}
+.red{
+    background-color: red;
 }
