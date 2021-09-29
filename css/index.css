@@ -4,9 +4,9 @@
 .main{
     display: grid; 
     background-color: yellow;
-    grid-template-columns: 10% 90%; 
+    grid-template-columns: 20% 80%; 
     height: auto;
-    margin: 0 auto;
+
     padding: 10px;
     position: relative;height: 100%;
 
@@ -28,7 +28,7 @@
     display: grid;
     grid-gap: 0; 
     grid-template-columns: repeat(var(--val),1fr);
-    grid-template-rows: repeat(var(--val),1fr);  
+    grid-template-rows: repeat(var(--val),1fr); 
     width: 1000px;
     height: 1000px;
     margin-left: auto;
@@ -38,7 +38,7 @@
 
 
 .grid-item{
-    background-color: rgb(173, 197, 240);
+    background-color: white;
     padding:1px;
 }
 .red{
