@@ -22,9 +22,18 @@ function addColor(e){
     item.classList.add('red');
 
     }
+function removeColor(){
+
+    cells.forEach(function(item){
+        item.classList.remove('red');
+        console.log(item);
+    });
+}
+
 insertDiv(50);
 
-let cells = document.querySelectorAll('.grid-container');
+var cells = document.querySelectorAll('.grid-item');
 cells.forEach(item => item.addEventListener("mouseover",addColor));
 
-
+var clear = document.querySelector('#clear');
+clear.addEventListener("click",removeColor);
