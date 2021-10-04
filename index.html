@@ -11,8 +11,14 @@
 <body>
 
     <div class = "main">
-        <div class = "mgrid cell-1">
-            <button id="clear">Clear</button>
+        <div class = "mgrid cell-1">  
+            
+            <button id="rainbow" class = "choice btn ">Rainbow</button>
+            <button id="clear" class = "choice btn ">Clear</button>
+            <button id="erase" class = "choice btn ">Erase</button>
+            <p id = "grid-value">10</p>
+            <input id="range"type="range" class = "btn" min = "0" max = "64"  value="10" onchange="addNewVal()">
+
         </div>
         <div class = "mgrid cell-2">
             <div id="box" class="grid-container">

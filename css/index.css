@@ -1,5 +1,7 @@
 :root{
     --val: 16;
+    --background-col: black;
+
 }
 .main{
     display: grid; 
@@ -17,7 +19,7 @@
     
 }
 .cell-1{
-    background-color: rgb(37, 33, 33);
+    background-color: white;
 }
 .cell-2{
     background-color: red;
@@ -37,10 +39,13 @@
 }
 
 
-.grid-item{
+.grid-container > div{
     background-color: white;
+    border:.2px solid gray;
     padding:1px;
 }
-.red{
-    background-color: red;
+#range{
+
 }
+
+
