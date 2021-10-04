@@ -17,7 +17,7 @@
             <button id="clear" class = "choice btn ">Clear</button>
             <button id="erase" class = "choice btn ">Erase</button>
             <p id = "grid-value">10</p>
-            <input id="range"type="range" class = "btn" min = "0" max = "64"  value="10" onchange="addNewVal()">
+            <input id="range"type="range" class = "btn" min = "0" max = "64"  value="10" oninput="insertDiv(addNewVal(this.value))">
 
         </div>
         <div class = "mgrid cell-2">

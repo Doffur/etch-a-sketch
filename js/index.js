@@ -1,30 +1,42 @@
 var container = document.querySelector(".grid-container");
 var value = document.querySelector(':root');
 
-function insertDiv(counter){
+function insertDiv(counter){ 
+    console.log(counter+'1');
+    container.innerHTML = " "
     value.style.setProperty('--val',counter);
     for(let count = 1 ; count <= counter*counter ; count++){
         let newDiv = document.createElement('div');
         newDiv.classList.add('grid-item');
-        newDiv.setAttribute('id',count)
+        newDiv.setAttribute('id',count);
         container.appendChild(newDiv);
     }
-   
-
- 
+  
 } 
 
-function clearGrid(e){
-    e.style.backgroundColor = null;
+
+function addNewVal(e){
+   let grid = parseInt(e)
+   let content = document.getElementById('grid-value')
+   if(isNaN(grid)){
+        grid = 10;
+        console.log('hello')
+   }
+   content.textContent = grid;
+   return grid;
+   
 }
 
-insertDiv(10);
+let update = document.querySelector('#range')
+update.addEventListener("change",insertDiv(addNewVal()));
+
 
 
 var choices = document.querySelectorAll('.choice');
-var all = document.getElementById("box").querySelectorAll('div');
 
-choices.forEach(val=>val.addEventListener('click',function(e){
+
+choices.forEach(val=>val.addEventListener("click",function(e){
+    var all = document.getElementById("box").querySelectorAll('div');
     console.log(e.target.id);
     switch(e.target.id){
         case "rainbow":
@@ -44,7 +56,9 @@ choices.forEach(val=>val.addEventListener('click',function(e){
             }))
             break;
         case "clear":
-            all.forEach(clearGrid)
+            all.forEach(function(e){
+                e.style.backgroundColor = null;
+            })
             break;
     }
     
