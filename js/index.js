@@ -14,31 +14,29 @@ function insertDiv(counter){
   
 } 
 
-
 function addNewVal(e){
    let grid = parseInt(e)
    let content = document.getElementById('grid-value')
    if(isNaN(grid)){
         grid = 10;
-        console.log('hello')
    }
-   content.textContent = grid;
+   content.textContent = grid+" x "+grid;
    return grid;
    
 }
 
-let update = document.querySelector('#range')
-update.addEventListener("change",insertDiv(addNewVal()));
-
-
-
-var choices = document.querySelectorAll('.choice');
-
-
-choices.forEach(val=>val.addEventListener("click",function(e){
+function settingColor(e){
     var all = document.getElementById("box").querySelectorAll('div');
+
     console.log(e.target.id);
     switch(e.target.id){
+        case "colorm":
+            all.forEach(item => item.addEventListener("mouseenter",function(e){
+                let color = document.getElementById('chosencol').value
+                console.log(color);
+                e.target.style.backgroundColor = color;
+            }))
+            break;
         case "rainbow":
             all.forEach(item => item.addEventListener("mouseenter",function(e){
                 const hex = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]
@@ -51,8 +49,9 @@ choices.forEach(val=>val.addEventListener("click",function(e){
             }))
             break;
         case "erase":
+            let sam = "erase"
             all.forEach(item =>item.addEventListener("mouseenter", function(e){
-                e.target.style.backgroundColor = null;
+                e.target.style.backgroundColor = "white";
             }))
             break;
         case "clear":
@@ -61,9 +60,17 @@ choices.forEach(val=>val.addEventListener("click",function(e){
             })
             break;
     }
-    
-})) 
+}
 
+
+
+
+
+let update = document.querySelector('#range')
+update.addEventListener("change",insertDiv(addNewVal()));
+
+var choices = document.querySelectorAll('.choice');
+choices.forEach(val=>val.addEventListener("click",settingColor)) 
 
 
 

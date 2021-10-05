@@ -11,16 +11,19 @@
 <body>
 
     <div class = "main">
-        <div class = "mgrid cell-1">  
-            
-            <button id="rainbow" class = "choice btn ">Rainbow</button>
-            <button id="clear" class = "choice btn ">Clear</button>
-            <button id="erase" class = "choice btn ">Erase</button>
-            <p id = "grid-value">10</p>
-            <input id="range"type="range" class = "btn" min = "0" max = "64"  value="10" oninput="insertDiv(addNewVal(this.value))">
-
+        <div class = "grid cell-1"> 
+            <div><input id ="chosencol" type="color"></div> 
+            <div><button id="colorm" class = "choice btn ">Color</button></div>
+            <div><button id="rainbow" class = "choice btn ">Rainbow</button></div>
+            <div><button id="erase" class = "choice btn ">Erase</button></div>
+            <div><button id="clear" class = "choice btn ">Clear</button></div>
+            <div>
+                <p id = "grid-value">10</p>
+                <input id="range" type="range" class = "btn" min = "0" max = "64"  value="10" oninput="insertDiv(addNewVal(this.value))">
+            </div>
         </div>
-        <div class = "mgrid cell-2">
+        <div class = "cell-2">
+            <h2 id = "title">ETCH A SKETCH</h2>
             <div id="box" class="grid-container">
                 
             </div>
