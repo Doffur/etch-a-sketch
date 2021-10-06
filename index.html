@@ -13,17 +13,17 @@
     <div class = "main">
         <div class = "grid cell-1"> 
             <div><input id ="chosencol" type="color"></div> 
-            <div><button id="colorm" class = "choice btn ">Color</button></div>
-            <div><button id="rainbow" class = "choice btn ">Rainbow</button></div>
-            <div><button id="erase" class = "choice btn ">Erase</button></div>
-            <div><button id="clear" class = "choice btn ">Clear</button></div>
+            <div><button id="colorm" class = "btn choice">Color</button></div>
+            <div><button id="rainbow" class = "btn choice">Rainbow</button></div>
+            <div><button id="erase" class = "btn choice">Erase</button></div>
+            <div><button id="clear" class = "choice">Clear</button></div>
             <div>
                 <p id = "grid-value">10</p>
-                <input id="range" type="range" class = "btn" min = "0" max = "64"  value="10" oninput="insertDiv(addNewVal(this.value))">
+                <input id="range" type="range" class = "btn" min = "2" max = "64"  value="10" oninput="insertDiv(addNewVal(this.value))">
             </div>
         </div>
         <div class = "cell-2">
-            <h2 id = "title">ETCH A SKETCH</h2>
+            <h2 id = "title">ETCH-a-<span style="color: rgb(134, 57, 57);">SKETCH</span> </h2>
             <div id="box" class="grid-container">
                 
             </div>

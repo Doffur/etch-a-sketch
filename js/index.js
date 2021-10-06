@@ -1,5 +1,6 @@
-var container = document.querySelector(".grid-container");
-var value = document.querySelector(':root');
+let container = document.querySelector(".grid-container");
+let value = document.querySelector(':root');
+let active = document.getElementsByClassName("btn")
 
 function insertDiv(counter){ 
     console.log(counter+'1');
@@ -26,9 +27,19 @@ function addNewVal(e){
 }
 
 function settingColor(e){
-    var all = document.getElementById("box").querySelectorAll('div');
+    let all = document.getElementById("box").querySelectorAll('div');
+    let current = document.getElementsByClassName('active')
+    if(e.target.id != "clear"){ 
+        if (current.length>0){
+        current[0].className = current[0].className.replace(" active", "");
+    }
+        e.target.classList.add("active");
+    }
+    console.log(current.length)
+   
+   
+    
 
-    console.log(e.target.id);
     switch(e.target.id){
         case "colorm":
             all.forEach(item => item.addEventListener("mouseenter",function(e){
@@ -71,6 +82,7 @@ update.addEventListener("change",insertDiv(addNewVal()));
 
 var choices = document.querySelectorAll('.choice');
 choices.forEach(val=>val.addEventListener("click",settingColor)) 
+
 
 
 

@@ -31,16 +31,29 @@
     margin:9%;
     
 }
-.choice{
+.choice{  
+    background-color: rgb(134, 57, 57);
+    color: white;
     width: 125px;
     padding: 1em;
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 2px;
+    font-weight:bolder;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.choice:hover{
+    background-color: rgb(41, 38, 38);
+}
+
+.active {  
+    background-color: rgb(41, 38, 38);
 }
 #chosencol{
     height: 100px;
     width: 100px;
-    border-radius: 10px;
+    border: 0;
     overflow: hidden;
 
 }
@@ -64,9 +77,10 @@
     color: rgb(29, 28, 28);
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: bold;
+    font-weight: bolder;
     text-align: center;
-    margin-bottom: .5%;
+    letter-spacing: 5px;
+    margin-bottom: .6%;
 }
 
 .grid-container{
@@ -85,7 +99,6 @@
 
 .grid-container > div{
     background-color: white;
-    border:.2px solid rgb(216, 216, 216);
     padding:1px;
 }
 
