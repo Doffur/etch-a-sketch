@@ -1,6 +1,9 @@
 let container = document.querySelector(".grid-container");
 let value = document.querySelector(':root');
 let active = document.getElementsByClassName("btn")
+let firstCell = document.querySelector(".cell-1");
+let removeActive = Array.from(firstCell.querySelectorAll("button"));
+
 
 function insertDiv(counter){ 
     console.log(counter+'1');
@@ -21,6 +24,11 @@ function addNewVal(e){
    if(isNaN(grid)){
         grid = 10;
    }
+   removeActive.map(item=>{
+       if(item.classList.contains('active')){
+            item.classList.remove('active');
+       } 
+   });
    content.textContent = grid+" x "+grid;
    return grid;
    
@@ -79,9 +87,7 @@ function settingColor(e){
 
 let update = document.querySelector('#range')
 update.addEventListener("change",insertDiv(addNewVal()));
-
-var choices = document.querySelectorAll('.choice');
-choices.forEach(val=>val.addEventListener("click",settingColor)) 
+removeActive.forEach(val=>val.addEventListener("click",settingColor)) 
 
 
 
